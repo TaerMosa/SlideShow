@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>HomePage</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var i = 0;
+		var images = [];
+		var time =1000;
+
+		//image list
+		images[0] = 'image1.jpg';
+		images[1] = 'image2.jpg';
+		images[2] = 'image3.jpg';
+
+		//change images
+		function ChangeImg() {
+			document.slide.src = images[i]
+
+			if (i < images.length) {
+				i++;
+			}else{
+				i=0;
+			}
+			setTimeout("ChangeImg()", time);
+		}
+	
+		window.onload = ChangeImg;
+	</script>
+	 <img name="slide" width="400" ,height="200">
+    
+
+	
+</body>
+</html>
